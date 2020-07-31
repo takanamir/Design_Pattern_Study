@@ -11,7 +11,10 @@ public class MyMain {
 
 	private static void doItLoop(MyClass myClass) {
 		for(int i = 0; i < 10; i++) {
-			myClass.doIt();
+			String result = myClass.doIt(i);
+			if(result != null) {
+				System.out.println(i + " : " + result);
+			}
 		}
 	}
 }

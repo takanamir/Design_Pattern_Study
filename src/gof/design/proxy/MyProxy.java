@@ -9,10 +9,13 @@ public class MyProxy implements MyClass {
 	}
 
 	@Override
-	public void doIt() {
+	public String doIt(int count) {
+		String result = null;
 		if (flag) {
-			myClass.doIt();
+			result = myClass.doIt(count);
 		}
 		flag = !flag;
+
+		return result;
 	}
 }
